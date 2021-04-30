@@ -1,6 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:ownertesting/DashBoard/frist.dart';
+import 'dart:ui';
+
+import 'DashBoard/onboard.dart';
+
 
 
 
@@ -25,11 +29,15 @@ class _MyAppState extends State<MyApp> {
           child: GestureDetector(
             onTap: (){
               Navigator.push(context, MaterialPageRoute(builder:(context){
-                return First_dash();
+                return OnboardingScreen();
               }),
               );
             },
-            child: Image.asset("assets/Assests_Illustrative Logo Symbol.png"),
+            child: Image.asset("assets/Assests_Positive Logo Horizontal.png",
+              height: MediaQuery.of(context).size.height*.6,
+              width: MediaQuery.of(context).size.width*.6,
+            ),
+
           ),
 
         ),

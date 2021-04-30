@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ownertesting/Availability/double_room.dart';
+import 'package:ownertesting/Cinnamon%20Citadel/Home.dart';
 import 'package:ownertesting/show%20All/showall.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -28,6 +29,24 @@ class Availability_Owner extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
+
+
+          leading:Padding(
+              padding: const EdgeInsets.all(8.0),
+              child:IconButton(
+                icon: const Icon(Icons.arrow_back_rounded,color: Colors.black,),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder:(context){
+                    return Home();
+
+                  },
+                  ),);
+
+                },
+
+              )
+          ),
+
           title: Text("Availability", style: TextStyle(color: Colors.black,
               fontSize: 15.0,
               fontWeight: FontWeight.normal),),
@@ -102,7 +121,7 @@ class Availability_Owner extends StatelessWidget {
 
                           child: Switch(
                               materialTapTargetSize: MaterialTapTargetSize.padded,
-                              activeColor: Colors.deepPurple,
+                              activeColor:Color(0xFF61498C),
                               value: true,
                               onChanged: (value) {
                                 // print("VALUE : $value");
@@ -172,7 +191,7 @@ class Availability_Owner extends StatelessWidget {
               Divider(),
               SizedBox(height: 40.0,),
               Container(
-                color: Colors.amber,
+                // color: Colors.amber,
                 width: double.infinity,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -189,7 +208,7 @@ class Availability_Owner extends StatelessWidget {
 
                           child: Switch(
                               materialTapTargetSize: MaterialTapTargetSize.padded,
-                              activeColor: Colors.deepPurple,
+                              activeColor: Color(0xFF61498C),
                               value: true,
                               onChanged: (value) {
                                 // print("VALUE : $value");
@@ -260,7 +279,7 @@ class Availability_Owner extends StatelessWidget {
               Divider(),
               SizedBox(height: 40.0,),
               Container(
-                color: Colors.lightBlueAccent,
+                // color: Colors.lightBlueAccent,
                 width: double.infinity,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -277,7 +296,7 @@ class Availability_Owner extends StatelessWidget {
 
                           child: Switch(
                               materialTapTargetSize: MaterialTapTargetSize.padded,
-                              activeColor: Colors.deepPurple,
+                              activeColor: Color(0xFF61498C),
                               value: true,
                               onChanged: (value) {
                                 // print("VALUE : $value");

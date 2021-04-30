@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ownertesting/Moreorigin/More.dart';
 import 'package:ownertesting/Notification%20Set/donot_distrub.dart';
 
 class TouchId_Passcode extends StatefulWidget {
@@ -32,11 +33,11 @@ class _TouchId_PasscodeState extends State<TouchId_Passcode> {
                 child:IconButton(
                   icon: const Icon(Icons.arrow_back_rounded,),
                   onPressed: () {
-                    setState(() {
-
-                    });
-                  },
-                )
+                    Navigator.push(
+                      context, MaterialPageRoute(builder: (context) {
+                      return Mor();
+                    }),);
+                  }, ),
             ),
             actions: [
               Text("Done",style: TextStyle(color: Colors.purple,fontSize: 16.0,fontWeight: FontWeight.normal),),

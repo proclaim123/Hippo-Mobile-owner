@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ownertesting/Cinnamon%20Citadel/Cinomon%20Citadel.dart';
-import 'file:///F:/Flutter%20vid/Owner/ownertesting/lib/propertyphotos/PropertyPhotos.dart';
+import 'package:ownertesting/propertyphotos/PropertyPhotos.dart';
 
 class Top_Facilities extends StatefulWidget {
   @override
@@ -26,11 +26,12 @@ class _Top_FacilitiesState extends State<Top_Facilities> {
     return SafeArea(
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.white,
             title: Text("Top Facilities",style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.normal),),
             leading:Padding(
                 padding: const EdgeInsets.all(8.0),
                 child:IconButton(
-                  icon: const Icon(Icons.arrow_back_rounded,),
+                  icon: const Icon(Icons.arrow_back_rounded,color:Colors.black,),
                   onPressed: () {
 
                     setState(() {

@@ -152,7 +152,7 @@ class _SignupState extends State<Signup> {
                                   borderRadius: BorderRadius.circular(10)),
                               child: Text(
                                 "Sign In with Your email",
-                                style: TextStyle(color: Colors.deepPurpleAccent),
+                                style: TextStyle(color: Color(0xFF61498C)),
                               ),
                             ),
                           ),

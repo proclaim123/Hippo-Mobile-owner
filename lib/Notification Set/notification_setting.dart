@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ownertesting/Moreorigin/More.dart';
 import 'package:ownertesting/Notification%20Set/TouchId&passcode.dart';
 
 
@@ -29,20 +30,25 @@ class _Notification_SettingState extends State<Notification_Setting> {
     return SafeArea(
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.white,
             title: Text("Notification Settings",style: TextStyle(color: Colors.black,fontSize: 16.0,fontWeight: FontWeight.normal),),
             leading:Padding(
                 padding: const EdgeInsets.all(8.0),
                 child:IconButton(
-                  icon: const Icon(Icons.arrow_back_rounded,),
+                  icon: const Icon(Icons.arrow_back_rounded,color: Colors.black,),
                   onPressed: () {
-                    setState(() {
+                    Navigator.push(context, MaterialPageRoute(builder:(context){
+                      return Mor();
 
-                    });
+                    },
+                    ),);
+
                   },
+
                 )
             ),
             actions: [
-              Text("Done",style: TextStyle(color: Colors.purple,fontSize: 16.0,fontWeight: FontWeight.normal),),
+              Text("Done",style: TextStyle(color: Color(0xFF61498C),fontSize: 16.0,fontWeight: FontWeight.normal),),
             ],
           ),
             body: SingleChildScrollView(
@@ -74,7 +80,7 @@ class _Notification_SettingState extends State<Notification_Setting> {
 
                                             child: Switch(
                                                 materialTapTargetSize: MaterialTapTargetSize.padded,
-                                                activeColor: Colors.deepPurple,
+                                                activeColor: Color(0xFF61498C),
                                                 value: true,
                                                 onChanged: (value) {
                                                   Navigator.push(context, MaterialPageRoute(builder:(context){
@@ -122,7 +128,7 @@ class _Notification_SettingState extends State<Notification_Setting> {
 
                                             child: Switch(
                                                 materialTapTargetSize: MaterialTapTargetSize.padded,
-                                                activeColor: Colors.deepPurple,
+                                                activeColor: Color(0xFF61498C),
                                                 value: true,
                                                 onChanged: (value) {
                                                   // print("VALUE : $value");
@@ -160,7 +166,7 @@ class _Notification_SettingState extends State<Notification_Setting> {
 
                                             child: Switch(
                                                 materialTapTargetSize: MaterialTapTargetSize.padded,
-                                                activeColor: Colors.deepPurple,
+                                                activeColor: Color(0xFF61498C),
                                                 value: true,
                                                 onChanged: (value) {
                                                   // print("VALUE : $value");
@@ -182,7 +188,7 @@ class _Notification_SettingState extends State<Notification_Setting> {
 
                                             child: Switch(
                                                 materialTapTargetSize: MaterialTapTargetSize.padded,
-                                                activeColor: Colors.deepPurple,
+                                                activeColor: Color(0xFF61498C),
                                                 value: true,
                                                 onChanged: (value) {
                                                   // print("VALUE : $value");
@@ -204,7 +210,7 @@ class _Notification_SettingState extends State<Notification_Setting> {
 
                                             child: Switch(
                                                 materialTapTargetSize: MaterialTapTargetSize.padded,
-                                                activeColor: Colors.deepPurple,
+                                                activeColor: Color(0xFF61498C),
                                                 value: true,
                                                 onChanged: (value) {
                                                   // print("VALUE : $value");
@@ -242,7 +248,7 @@ class _Notification_SettingState extends State<Notification_Setting> {
 
                                                      child: Switch(
                                                       materialTapTargetSize: MaterialTapTargetSize.padded,
-                                                     activeColor: Colors.deepPurple,
+                                                     activeColor: Color(0xFF61498C),
                                                       value: true,
                                                       onChanged: (value) {
                                                       // print("VALUE : $value");
@@ -280,7 +286,7 @@ class _Notification_SettingState extends State<Notification_Setting> {
 
                                               child: Switch(
                                                   materialTapTargetSize: MaterialTapTargetSize.padded,
-                                                  activeColor: Colors.deepPurple,
+                                                  activeColor: Color(0xFF61498C),
                                                   value: true,
                                                   onChanged: (value) {
                                                     // print("VALUE : $value");
@@ -301,7 +307,7 @@ class _Notification_SettingState extends State<Notification_Setting> {
 
                                               child: Switch(
                                                   materialTapTargetSize: MaterialTapTargetSize.padded,
-                                                  activeColor: Colors.deepPurple,
+                                                  activeColor: Color(0xFF61498C),
                                                   value: true,
                                                   onChanged: (value) {
                                                     // print("VALUE : $value");
@@ -339,7 +345,7 @@ class _Notification_SettingState extends State<Notification_Setting> {
 
                                               child: Switch(
                                                   materialTapTargetSize: MaterialTapTargetSize.padded,
-                                                  activeColor: Colors.deepPurple,
+                                                  activeColor: Color(0xFF61498C),
                                                   value: true,
                                                   onChanged: (value) {
                                                     // print("VALUE : $value");
@@ -360,7 +366,7 @@ class _Notification_SettingState extends State<Notification_Setting> {
 
                                               child: Switch(
                                                   materialTapTargetSize: MaterialTapTargetSize.padded,
-                                                  activeColor: Colors.deepPurple,
+                                                  activeColor: Color(0xFF61498C),
                                                   value: true,
                                                   onChanged: (value) {
                                                     // print("VALUE : $value");
@@ -381,7 +387,7 @@ class _Notification_SettingState extends State<Notification_Setting> {
 
                                               child: Switch(
                                                   materialTapTargetSize: MaterialTapTargetSize.padded,
-                                                  activeColor: Colors.deepPurple,
+                                                  activeColor: Color(0xFF61498C),
                                                   value: true,
                                                   onChanged: (value) {
                                                     // print("VALUE : $value");
@@ -402,7 +408,7 @@ class _Notification_SettingState extends State<Notification_Setting> {
 
                                               child: Switch(
                                                   materialTapTargetSize: MaterialTapTargetSize.padded,
-                                                  activeColor: Colors.deepPurple,
+                                                  activeColor: Color(0xFF61498C),
                                                   value: true,
                                                   onChanged: (value) {
                                                     // print("VALUE : $value");
@@ -423,7 +429,7 @@ class _Notification_SettingState extends State<Notification_Setting> {
 
                                               child: Switch(
                                                   materialTapTargetSize: MaterialTapTargetSize.padded,
-                                                  activeColor: Colors.deepPurple,
+                                                  activeColor: Color(0xFF61498C),
                                                   value: true,
                                                   onChanged: (value) {
                                                     // print("VALUE : $value");

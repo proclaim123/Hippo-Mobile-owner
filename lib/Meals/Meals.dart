@@ -99,8 +99,8 @@ class _MealsState extends State<Meals> {
                       Text("Lunch",style: TextStyle(color: Colors.grey,fontSize: 13,fontWeight: FontWeight.normal),),
                       Switch(
                           materialTapTargetSize: MaterialTapTargetSize.padded,
-                          activeColor: Colors.deepPurple,
-                          value: true,
+                          activeColor: Color(0xFF61498C),
+                          value: false,
                           onChanged: (value) {
                             Navigator.push(context, MaterialPageRoute(builder:(context){
                               return ;
@@ -120,8 +120,8 @@ class _MealsState extends State<Meals> {
                       Text("Dinner",style: TextStyle(color: Colors.grey,fontSize: 13,fontWeight: FontWeight.normal),),
                       Switch(
                           materialTapTargetSize: MaterialTapTargetSize.padded,
-                          activeColor: Colors.deepPurple,
-                          value: true,
+                          activeColor: Color(0xFF61498C),
+                          value: false,
                           onChanged: (value) {
                             Navigator.push(context, MaterialPageRoute(builder:(context){
                               return ;

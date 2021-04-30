@@ -50,6 +50,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ownertesting/More/More.dart';
+import 'package:ownertesting/Moreorigin/More.dart';
 
 import 'Chat_Model.dart';
 
@@ -163,7 +164,7 @@ class _Show_allState extends State<Show_all> {
                                                           MaterialPageRoute(
                                                               builder: (
                                                                   context) {
-                                                                return More();
+                                                                return Mor();
                                                               }
                                                           ),
                                                         );

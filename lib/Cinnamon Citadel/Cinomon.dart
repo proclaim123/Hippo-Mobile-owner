@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ownertesting/Bids/Bids.dart';
 import 'package:ownertesting/Offers/receiveandacceptoffers.dart';
 import 'package:ownertesting/SignUpPage/Letsget_started.dart';
+
 class Cinomon extends StatefulWidget {
   @override
   _CinomonState createState() => _CinomonState();
