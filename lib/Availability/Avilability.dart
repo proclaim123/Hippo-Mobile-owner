@@ -2,6 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:ownertesting/Availability/double_room.dart';
 import 'package:ownertesting/Cinnamon%20Citadel/Home.dart';
+import 'package:ownertesting/MessagesOrigin/dart/message.dart';
+import 'package:ownertesting/Moreorigin/More.dart';
+import 'package:ownertesting/reservation/reservationList.dart';
 import 'package:ownertesting/show%20All/showall.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -384,34 +387,98 @@ class Availability_Owner extends StatelessWidget {
             setState(() {
               _selectedpage =index;
 
+              print(index);
+
             });
           },
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home),
+              // icon: Icon(Icons.home,color: Colors.blueAccent,),
+              // title: Text ('home',style: TextStyle(color: Colors.black),)
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder:(context){
+                    return Home();
+                  }),);
+                },
+                child: ImageIcon(
 
-                title: Text ('home')
+                  AssetImage("assets/homeS.png",
+                  ),color: Colors.grey,
+
+
+                ),
+              ),
+              title: Text('Home',style: TextStyle(color:Colors.black),),
+
 
             ), BottomNavigationBarItem(
-                icon: Icon(Icons.work_outlined),
-                title: Text ('Reservation')
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.calendar_today_sharp),
-                title: Text ('Availability')
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.email),
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder:(context){
+                    return  ReservationList();
+                  }),);
+                },
+                child: ImageIcon(
+                  AssetImage("assets/reservationS.png",
+                  ),color: Colors.grey,
 
-                title: Text ('Messages')
+                ),
+              ),
+              title: Text('Reservation',style: TextStyle(color:Colors.black),),
+
             ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.more_horiz_rounded),
-                title: Text ('More')
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder:(context){
+                    return Availability_Owner();
+                  }),);
+                },
+                child: ImageIcon(
+                  AssetImage("assets/availabilityS.png",
+                  ),color: Colors.grey,
+
+                ),
+              ),
+              title: Text('Availability',style: TextStyle(color:Colors.black),),
+
+            ),
+            BottomNavigationBarItem(
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder:(context){
+                    return MessageList() ;
+                  }),);
+                },
+                child: ImageIcon(
+                  AssetImage("assets/msgS.png"
+                  ),color: Colors.grey,
+
+                ),
+              ),
+              title: Text('Messages',style: TextStyle(color:Colors.black),),
+
+            ),
+            BottomNavigationBarItem(
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder:(context){
+                    return Mor();
+                  }),);
+                },
+                child: ImageIcon(
+                  AssetImage("assets/moreS.png",
+                  ),color: Colors.grey,
+
+                ),
+              ),
+              title: Text('More',style: TextStyle(color:Colors.black),),
+
             ),
           ],
-
         ),
+
 
       ),
     );

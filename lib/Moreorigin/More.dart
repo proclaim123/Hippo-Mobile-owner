@@ -3,8 +3,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
+import 'package:ownertesting/Availability/Avilability.dart';
 import 'package:ownertesting/Bids/bid_requestmain.dart';
 import 'package:ownertesting/Cinnamon%20Citadel/Home.dart';
+import 'package:ownertesting/Meals/mealsOrigin.dart';
+import 'package:ownertesting/MessagesOrigin/dart/message.dart';
 import 'package:ownertesting/Notification%20Set/TouchId&passcode.dart';
 import 'package:ownertesting/Notification%20Set/donot_distrub.dart';
 import 'package:ownertesting/Notification%20Set/notification_setting.dart';
@@ -12,6 +15,7 @@ import 'package:ownertesting/Propertyorigin/propertyDetails.dart';
 import 'package:ownertesting/offers_origin/receive_and_accepted.dart';
 import 'package:ownertesting/promotion_origin/dart/promotiontab.dart';
 import 'package:ownertesting/recomondation/recomondation.dart';
+import 'package:ownertesting/reservation/reservationList.dart';
 
 
 
@@ -33,6 +37,23 @@ class Mor extends StatelessWidget {
 
       ),
     );
+
+    bool _switchValue = true;
+    int counter =0;
+    String dropdownstr="Info";
+    int _selectedpage =4;
+    final _pageOptions =[
+      Text('Items 1',style: TextStyle(fontSize: 26.0 ),),
+      Text('Items 2',style: TextStyle(fontSize: 26.0 ),),
+      Text('Items 3',style: TextStyle(fontSize: 26.0 ),),
+      Text('Items 4',style: TextStyle(fontSize: 26.0 ),),
+      Text('Items 5',style: TextStyle(fontSize: 26.0 ),),
+
+
+    ];
+
+
+
     //dynamic Layout
     var mediaQuery = MediaQuery.of(context).size;
     List<String> nameArray1 = [
@@ -383,7 +404,7 @@ class Mor extends StatelessWidget {
                                 context,
                                 CupertinoPageRoute(
                                     fullscreenDialog: false,
-                                    builder: (context) => Mor()),
+                                    builder: (context) => Mealss()),
                                   // Mealss
                               );
                             }
@@ -618,6 +639,112 @@ class Mor extends StatelessWidget {
                   ),
                 ),
               ),
-            ])));
+            ]
+            )
+        ),
+
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.black,
+        currentIndex: _selectedpage,
+        onTap: (int index) {
+          setState(() {
+            _selectedpage =index;
+
+            print(index);
+
+          });
+        },
+        items: [
+          BottomNavigationBarItem(
+            // icon: Icon(Icons.home,color: Colors.blueAccent,),
+            // title: Text ('home',style: TextStyle(color: Colors.black),)
+            icon: GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder:(context){
+                  return Home();
+                }),);
+              },
+              child: ImageIcon(
+
+                AssetImage("assets/homeS.png",
+                ),color: Colors.grey,
+
+
+              ),
+            ),
+            title: Text('Home',style: TextStyle(color:Colors.black),),
+
+
+          ), BottomNavigationBarItem(
+            icon: GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder:(context){
+                  return  ReservationList();
+                }),);
+              },
+              child: ImageIcon(
+                AssetImage("assets/reservationS.png",
+                ),color: Colors.grey,
+
+              ),
+            ),
+            title: Text('Reservation',style: TextStyle(color:Colors.black),),
+
+          ),
+          BottomNavigationBarItem(
+            icon: GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder:(context){
+                  return Availability_Owner();
+                }),);
+              },
+              child: ImageIcon(
+                AssetImage("assets/availabilityS.png",
+                ),color: Colors.grey,
+
+              ),
+            ),
+            title: Text('Availability',style: TextStyle(color:Colors.black),),
+
+          ),
+          BottomNavigationBarItem(
+            icon: GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder:(context){
+                  return MessageList() ;
+                }),);
+              },
+              child: ImageIcon(
+                AssetImage("assets/msgS.png"
+                ),color: Colors.grey,
+
+              ),
+            ),
+            title: Text('Messages',style: TextStyle(color:Colors.black),),
+
+          ),
+          BottomNavigationBarItem(
+            icon: GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder:(context){
+                  return Mor();
+                }),);
+              },
+              child: ImageIcon(
+                AssetImage("assets/moreS.png",
+                ),color: Colors.grey,
+
+              ),
+            ),
+            title: Text('More',style: TextStyle(color:Colors.black),),
+
+          ),
+        ],
+      ),
+
+
+    );
   }
+
+  void setState(Null Function() param0) {}
 }

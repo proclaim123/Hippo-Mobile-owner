@@ -3,6 +3,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:ownertesting/Availability/Avilability.dart';
+import 'package:ownertesting/Cinnamon%20Citadel/Home.dart';
+import 'package:ownertesting/MessagesOrigin/dart/message.dart';
+import 'package:ownertesting/Moreorigin/More.dart';
 import 'package:ownertesting/reservation/reservationDetails.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
@@ -14,6 +18,25 @@ class ReservationList extends StatefulWidget {
   @override
   _ReservationListState createState() => _ReservationListState();
 }
+
+
+
+bool _switchValue = true;
+int counter =0;
+String dropdownstr="Info";
+int _selectedpage =4;
+final _pageOptions =[
+  Text('Items 1',style: TextStyle(fontSize: 26.0 ),),
+  Text('Items 2',style: TextStyle(fontSize: 26.0 ),),
+  Text('Items 3',style: TextStyle(fontSize: 26.0 ),),
+  Text('Items 4',style: TextStyle(fontSize: 26.0 ),),
+  Text('Items 5',style: TextStyle(fontSize: 26.0 ),),
+
+
+];
+
+
+
 
 class _ReservationListState extends State<ReservationList> {
   List<String> nameArray = [
@@ -188,7 +211,112 @@ class _ReservationListState extends State<ReservationList> {
               ],
             ),
           ),
-        ));
+
+
+          bottomNavigationBar: BottomNavigationBar(
+            backgroundColor: Colors.black,
+            currentIndex: _selectedpage,
+            onTap: (int index) {
+              setState(() {
+                _selectedpage =index;
+
+                print(index);
+
+              });
+            },
+            items: [
+              BottomNavigationBarItem(
+                // icon: Icon(Icons.home,color: Colors.blueAccent,),
+                // title: Text ('home',style: TextStyle(color: Colors.black),)
+                icon: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder:(context){
+                      return Home();
+                    }),);
+                  },
+                  child: ImageIcon(
+
+                    AssetImage("assets/homeS.png",
+                    ),color: Colors.grey,
+
+
+                  ),
+                ),
+                title: Text('Home',style: TextStyle(color:Colors.black),),
+
+
+              ), BottomNavigationBarItem(
+                icon: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder:(context){
+                      return  ReservationList();
+                    }),);
+                  },
+                  child: ImageIcon(
+                    AssetImage("assets/reservationS.png",
+                    ),color: Colors.grey,
+
+                  ),
+                ),
+                title: Text('Reservation',style: TextStyle(color:Colors.black),),
+
+              ),
+              BottomNavigationBarItem(
+                icon: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder:(context){
+                      return Availability_Owner();
+                    }),);
+                  },
+                  child: ImageIcon(
+                    AssetImage("assets/availabilityS.png",
+                    ),color: Colors.grey,
+
+                  ),
+                ),
+                title: Text('Availability',style: TextStyle(color:Colors.black),),
+
+              ),
+              BottomNavigationBarItem(
+                icon: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder:(context){
+                      return MessageList() ;
+                    }),);
+                  },
+                  child: ImageIcon(
+                    AssetImage("assets/msgS.png"
+                    ),color: Colors.grey,
+
+                  ),
+                ),
+                title: Text('Messages',style: TextStyle(color:Colors.black),),
+
+              ),
+              BottomNavigationBarItem(
+                icon: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder:(context){
+                      return Mor();
+                    }),);
+                  },
+                  child: ImageIcon(
+                    AssetImage("assets/moreS.png",
+                    ),color: Colors.grey,
+
+                  ),
+                ),
+                title: Text('More',style: TextStyle(color:Colors.black),),
+
+              ),
+            ],
+          ),
+
+
+
+
+        )
+    );
   }
 
   //
@@ -284,7 +412,7 @@ class _ReservationListState extends State<ReservationList> {
                                   Container(
                                     child: Image(
                                       image: AssetImage(
-                                          "assets/reservation/Rectangle 1475.png"),
+                                          "assets/Rectangle 1475.png"),
                                       fit: BoxFit.fill,
                                       height:
                                       MediaQuery.of(context).size.height *
