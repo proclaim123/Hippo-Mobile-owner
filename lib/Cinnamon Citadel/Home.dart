@@ -3,6 +3,7 @@ import 'package:badges/badges.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:expandable_bottom_sheet/expandable_bottom_sheet.dart';
+import 'package:ownertesting/Availability/Availabilitynew.dart';
 import 'package:ownertesting/Availability/Avilability.dart';
 import 'package:ownertesting/Bids/bid_requestmain.dart';
 import 'package:ownertesting/MessagesOrigin/dart/message.dart';
@@ -875,7 +876,7 @@ class _HomeState extends State<Home> {
               icon: GestureDetector(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder:(context){
-                    return Availability_Owner();
+                    return Availability();
                   }),);
                 },
                 child: ImageIcon(

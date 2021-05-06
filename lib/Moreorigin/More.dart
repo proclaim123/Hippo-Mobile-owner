@@ -17,6 +17,10 @@ import 'package:ownertesting/promotion_origin/dart/promotiontab.dart';
 import 'package:ownertesting/recomondation/recomondation.dart';
 import 'package:ownertesting/reservation/reservationList.dart';
 
+import 'Donotdistrub.dart';
+import 'Notificationsettings.dart';
+import 'TouchID&passcode.dart';
+
 
 
 class Mor extends StatelessWidget {
@@ -490,21 +494,21 @@ class Mor extends StatelessWidget {
                                 context,
                                 CupertinoPageRoute(
                                     fullscreenDialog: false,
-                                    builder: (context) => Notification_Setting()),
+                                    builder: (context) => NotificationSettings()),
                               );
                             } else if (nameArray4[i] == "Do not disturb") {
                               Navigator.push(
                                 context,
                                 CupertinoPageRoute(
                                     fullscreenDialog: false,
-                                    builder: (context) => Donot_Distrub(),),
+                                    builder: (context) => DoNotDisturb(),),
                               );
                             } else {
                               Navigator.push(
                                 context,
                                 CupertinoPageRoute(
                                     fullscreenDialog: false,
-                                    builder: (context) => TouchId_Passcode()),
+                                    builder: (context) => TouchIDPassword()),
                               );
                             }
                           },

@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:ownertesting/Availability/Availabilitynew.dart';
 import 'package:ownertesting/Availability/Avilability.dart';
 import 'package:ownertesting/Cinnamon%20Citadel/Home.dart';
 import 'package:ownertesting/Moreorigin/More.dart';
@@ -188,7 +189,7 @@ class _MessageListState extends State<MessageList> {
             icon: GestureDetector(
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder:(context){
-                  return Availability_Owner();
+                  return Availability();
                 }),);
               },
               child: ImageIcon(
